@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
 <body>
-  <div>
-    <div id="player-1-panel" class="player-panel active">
+  <div class="container" id="game-board">
+    <div id="player-1-panel" class="player-panel left active">
       <div id="player-1" class="player">Joueur 1 <span id="scoreOne">0/100</span></div>
       <div class="player-current-box">
         <div class="player-current-label">Tour en cours</div>
         <div class="player-current-score" id="current-1">0</div>
       </div>
     </div>
-    <div id="player-2-panel" class="player-panel">
+    <div id="player-2-panel" class="player-panel right">
       <div id="player-2" class="player">Joueur 2 <span id="scoreTwo">0/100</span></div>
       <div class="player-current-box">
         <div class="player-current-label">Tour en cours</div>
@@ -24,9 +24,12 @@
       </div>
     </div>
     <img src="images/dePlein.jpg" alt="dice" width="80" height="80" id="dices">
-    <button id="rollDice">Lancer</button>
-    <button id="hold">Garder</button>
-    <button id="newGame">Nouvelle partie</button>
+
+  <div>
+      <button class="btn" id="rollDice">Lancer</button>
+      <button class="btn" id="hold">Garder</button>
+      <button class="btn" id="newGame">Nouvelle partie</button>
+  </div>
   </div>
   <script src="main.js"></script>
 </body>

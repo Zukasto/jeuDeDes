@@ -45,7 +45,7 @@ function newGame() {
   scoreTwoElement.textContent = scoreTwo + "/100";
 
   // Cacher le dé
-  diceElement.style.display = "none";
+  diceElement.style.display = "block";
 
   // Mettre à jour les classes CSS pour les panneaux des joueurs
   document.getElementById("player-1-panel").classList.add("active");
