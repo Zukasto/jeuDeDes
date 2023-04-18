@@ -41,7 +41,6 @@ function newGame() {
   scoreTwo = 0;
   activePlayer = 1;
   roundScore = 0;
-
   // Mettre à jour l'affichage des scores
   scoreOneElement.textContent = scoreOne + "/100";
   scoreTwoElement.textContent = scoreTwo + "/100";
@@ -74,24 +73,32 @@ function rollDice() {
 }
 
 // Fonction pour gérer la fin du tour
-function hold() {
-  let keepSound = new Audio('son/keep.mp3')
-  if (activePlayer === 1) {
-    scoreOne += roundScore;
-  } else {
-    scoreTwo += roundScore;
-  }
-  roundScore = 0;
-  updateScores();
-  keepSound.play();
-  document.querySelector("#current-" + activePlayer).textContent = roundScore;
-  if (scoreOne >= 100 || scoreTwo >= 100) {
-    alert("Le joueur " + activePlayer + " a gagné !");
-    newGame();
-  } else {
+  function hold() {
+    let keepSound = new Audio('son/keep.mp3');
+    let winSoundOne = new Audio('son/win1.mp3');
+    let winSoundTwo = new Audio('son/win2.mp3');
+    
+    if (activePlayer === 1) {
+      scoreOne += roundScore;
+      if (scoreOne >= 100) {
+        winSoundOne.play();
+        newGame();
+        return;
+      }
+    } else {
+      scoreTwo += roundScore;
+      if (scoreTwo >= 100) {
+        winSoundTwo.play();
+        newGame();
+        return;
+      }
+    }
+    roundScore = 0;
+    updateScores();
+    keepSound.play();
+    document.querySelector("#current-" + activePlayer).textContent = roundScore;
     switchPlayer();
   }
-}
 
 // Initialiser une nouvelle partie
 newGame();
