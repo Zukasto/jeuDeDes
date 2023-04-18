@@ -2,9 +2,11 @@
 let scoreOne = 0;
 let scoreTwo = 0;
 
+
 // Définir les variables pour le tour en cours
 let activePlayer = 1;
 let roundScore = 0;
+
 
 // Sélectionner les éléments HTML pour les scores des joueurs
 let scoreOneElement = document.getElementById("scoreOne");
@@ -56,11 +58,15 @@ function newGame() {
 
 // Fonction pour gérer le lancer de dé
 function rollDice() {
+  let diceSound = new Audio('son/roll.wav');
+  let oneSound = new Audio('son/loose.wav')
+  diceSound.play();
   let diceNumber = Math.floor(Math.random() * 6) + 1;
   diceElement.style.display = "block";
   diceElement.src = "images/de" + diceNumber + ".jpg";
   if (diceNumber === 1) {
     switchPlayer();
+    oneSound.play()
   } else {
     roundScore += diceNumber;
     document.querySelector("#current-" + activePlayer).textContent = roundScore;
@@ -69,6 +75,7 @@ function rollDice() {
 
 // Fonction pour gérer la fin du tour
 function hold() {
+  let keepSound = new Audio('son/keep.mp3')
   if (activePlayer === 1) {
     scoreOne += roundScore;
   } else {
@@ -76,6 +83,7 @@ function hold() {
   }
   roundScore = 0;
   updateScores();
+  keepSound.play();
   document.querySelector("#current-" + activePlayer).textContent = roundScore;
   if (scoreOne >= 100 || scoreTwo >= 100) {
     alert("Le joueur " + activePlayer + " a gagné !");
