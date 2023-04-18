@@ -5,10 +5,13 @@
   font-size: 18px;
 }
 .container {
-  width: 600px;
+  display: flex;
+  width: 900px;
   margin: 0 auto;
   text-align: center;
 }
+
+
 
 .player-panel.active {
   background-color: #b2b2b2;
@@ -18,6 +21,22 @@
 .player-panel.active::before {
   content: "\2022"; /* Utilisation d'un point noir Unicode */
   color: red;
-  margin-right: 5px;
+  margin-right: -80px;
+}
+
+
+
+.roll{
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  margin: 2px;
+  padding: 4px;
+  border: none;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
