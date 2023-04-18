@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-*{
+* {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
 }
+
 .container {
   display: flex;
   width: 900px;
@@ -11,32 +12,111 @@
   text-align: center;
 }
 
-
-
-.player-panel.active {
-  background-color: #b2b2b2;
-  color: #fff;
+.player-panel.left {
+  border-right: 5px solid black;
 }
 
-.player-panel.active::before {
-  content: "\2022"; /* Utilisation d'un point noir Unicode */
-  color: red;
-  margin-right: -80px;
+.player-panel.right {
+  border-left: 5px solid black;
 }
 
+.player {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
 
+.player-current-box {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.player-current-label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.player-current-score {
+  font-size: 24px;
+  font-weight: bold;
+}
 
 .roll{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
+
 .btn{
-  margin: 2px;
-  padding: 4px;
+  margin: 10px;
+  padding: 10px 20px;
   border: none;
   color: white;
   background-color: black;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
+.btn:hover {
+  background-color: #555;
+}
+
+#game-board {
+  margin-top: 40px;
+}
+
+#dices {
+  margin-bottom: 10px;
+}
+
+#player-1-panel.active {
+  background-color: #b2b2b2;
+  color: #fff;
+  border: 5px solid black;
+}
+
+#player-2-panel.active {
+  background-color: #b2b2b2;
+  color: #fff;
+  border: 5px solid black;
+}
+
+#player-1-panel.active::before,
+#player-2-panel.active::before {
+  content: "\2022";
+  color: red;
+  margin-right: -80px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .player-panel {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+  }
+  .player-panel.left {
+    border-bottom: 5px solid black;
+  }
+  .player-panel.right {
+    border-top: 5px solid black;
+  }
+  #player-1-panel.active,
+  #player-2-panel.active {
+    border: none;
+  }
+}
