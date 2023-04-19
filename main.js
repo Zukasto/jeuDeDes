@@ -12,6 +12,7 @@ let roundScore = 0;
 let scoreOneElement = document.getElementById("scoreOne");
 let scoreTwoElement = document.getElementById("scoreTwo");
 
+
 // Sélectionner les éléments HTML pour les boutons
 let rollDiceButton = document.getElementById("rollDice");
 let holdButton = document.getElementById("hold");
@@ -25,6 +26,7 @@ function updateScores() {
   scoreOneElement.textContent = scoreOne + "/100";
   scoreTwoElement.textContent = scoreTwo + "/100";
 }
+
 
 // Fonction pour changer de joueur actif
 function switchPlayer() {
@@ -107,3 +109,4 @@ newGame();
 rollDiceButton.addEventListener("click", rollDice);
 holdButton.addEventListener("click", hold);
 newGameButton.addEventListener("click", newGame);
+

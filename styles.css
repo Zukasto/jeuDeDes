@@ -13,11 +13,11 @@
 }
 
 .player-panel.left {
-  border-right: 5px solid black;
+  border-right: 5px solid rgba(243, 156, 18,1.0);
 }
 
 .player-panel.right {
-  border-left: 5px solid black;
+  border-left: 5px solid rgba(243, 156, 18,1.0);
 }
 
 .player {
@@ -54,7 +54,7 @@
   padding: 10px 20px;
   border: none;
   color: white;
-  background-color: black;
+  background-color: rgba(230, 126, 34,1.0);
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -62,7 +62,7 @@
 }
 
 .btn:hover {
-  background-color: #555;
+  background-color: rgba(211, 84, 0,1.0);
 }
 
 #game-board {
@@ -74,15 +74,15 @@
 }
 
 #player-1-panel.active {
-  background-color: #b2b2b2;
+  background-color: rgba(243, 156, 18,1.0);
   color: #fff;
-  border: 5px solid black;
+  border: 5px solid rgba(241, 196, 15,1.0);
 }
 
 #player-2-panel.active {
-  background-color: #b2b2b2;
+  background-color: rgba(243, 156, 18,1.0);
   color: #fff;
-  border: 5px solid black;
+  border: 5px solid rgba(241, 196, 15,1.0);
 }
 
 #player-1-panel.active::before,
@@ -100,7 +100,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .container {
     flex-wrap: wrap;
   }
@@ -119,4 +119,4 @@ body {
   #player-2-panel.active {
     border: none;
   }
-}
+}*/
