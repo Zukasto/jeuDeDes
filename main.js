@@ -28,6 +28,7 @@ function updateScores() {
 }
 
 
+
 // Fonction pour changer de joueur actif
 function switchPlayer() {
   roundScore = 0;
