@@ -101,8 +101,8 @@
   align-items: center;
   width: 600px;
   min-height: 15px;
-  background: black;
-  color: #fffc00;
+  background: rgba(240, 175, 70, 0.72);
+  color: white;
   padding: 2rem 0;
   margin: 0 auto
 }
