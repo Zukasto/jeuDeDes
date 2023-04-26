@@ -8,6 +8,7 @@
   <title>Document</title>
 </head>
 <body>
+ 
   <div class="container" id="game-board">
   <!--joueur 1-->    
   <div id="player-1-panel" class="player-panel left active">
@@ -36,7 +37,22 @@
     </div> 
   </div>
   <div class="footer">
-    règle du jeu
+  <button id="rulesButton">Règles du jeu</button>
+  </div>
+  <div id="rules-popup" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Règles du jeu</h2>
+      <p>Le jeu comprend 2 joueurs sur un seul et même écran.<br>
+        Chaque joueur possède un score temporaire et un score global.<br>
+        À chaque tour, le joueur peut lancer un dé autant de fois qu'il le souhaite.<br> Le
+        résultat d’un lancer est ajouté au score.
+        Lors de son tour, le joueur peut décider à tout moment de:<br>
+        - Cliquer sur l’option “garder”, qui permet d’envoyer les points du score vers le "/100". Ce sera alors le
+        tour de l’autre joueur.<br>
+        - Lancer le dé. S’il obtient un 1, son score est perdu et c’est la fin de son tour.
+        Le premier joueur qui atteint les 100 points sur global gagne le jeu.</p>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>

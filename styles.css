@@ -5,6 +5,13 @@
   font-size: 18px;
 }
 
+body{
+  border: black solid 1px;
+  box-shadow: 1px 1px 16px 
+  #555;
+  ;
+}
+
 .container {
   display: flex;
   width: 600px;
@@ -105,6 +112,46 @@
   color: white;
   padding: 2rem 0;
   margin: 0 auto
+}
+
+#rules-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 500px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+}
+
+#rules-popup h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+#rules-popup p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#rulesButton {
+  border: none;
+  background-color: rgba(230, 126, 34,1.0);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#rulesButton:hover {
+  background-color: rgba(211, 84, 0,1.0);
 }
 
 

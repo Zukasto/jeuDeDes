@@ -75,6 +75,26 @@ function rollDice() {
   }
 }
 
+//règles du jeu
+let rulesModal = document.getElementById("rules-popup");
+let rulesButton = document.getElementById("rulesButton");
+let close = document.getElementsByClassName("close")[0];
+
+rulesButton.onclick = function() {
+  rulesModal.style.display = "block";
+
+}
+
+close.onclick = function() {
+  rulesModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == rulesModal) {
+    rulesModal.style.display = "none";
+  }
+}
+
 // Fonction pour gérer la fin du tour
   function hold() {
     let keepSound = new Audio('son/keep.mp3');
