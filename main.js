@@ -105,6 +105,7 @@ window.onclick = function(event) {
       scoreOne += roundScore;
       if (scoreOne >= 100) {
         winSoundOne.play();
+        alert('Joueur 1 gagne');
         newGame();
         return;
       }
@@ -112,6 +113,7 @@ window.onclick = function(event) {
       scoreTwo += roundScore;
       if (scoreTwo >= 100) {
         winSoundTwo.play();
+        alert('Joueur 2 gagne');
         newGame();
         return;
       }
